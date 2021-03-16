@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BIT.AspNetCore" Version="20.2.5.5840" />
+    <PackageReference Include="BIT.Xpo" Version="20.2.5.5840" />
+    <PackageReference Include="BIT.Xpo.Providers.OfflineDataSync.Demo" Version="20.2.5.22" />
+    <PackageReference Include="BIT.Xpo.Providers.OfflineDataSync.Server" Version="20.2.5.22" />
+    <PackageReference Include="RestClient.Net" Version="4.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+</Project>

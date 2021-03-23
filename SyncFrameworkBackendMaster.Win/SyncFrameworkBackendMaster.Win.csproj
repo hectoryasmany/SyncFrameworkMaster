@@ -326,6 +326,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Orm\Orm.csproj">
+      <Project>{edb05d17-12fe-415c-89fa-bcd61fde1c47}</Project>
+      <Name>Orm</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SyncFrameworkBackendMaster.Module.Win\SyncFrameworkBackendMaster.Module.Win.csproj">
       <Project>{4DC9C19C-C4AD-465B-A4CC-F8A83F0C2469}</Project>
       <Name>SyncFrameworkBackendMaster.Module.Win</Name>

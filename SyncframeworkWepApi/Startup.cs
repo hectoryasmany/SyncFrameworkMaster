@@ -1,5 +1,6 @@
 using BIT.Data.Services;
 using BIT.Xpo.Providers.OfflineDataSync;
+using DevExpress.Xpo;
 using DevExpress.Xpo.DB;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -25,13 +26,17 @@ namespace SyncframeworkWepApi
         }
 
         public IConfiguration Configuration { get; }
-
+        AutoCreateOption autoCreateOption = AutoCreateOption.SchemaAlreadyExists;
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            IDataStore dataStore = XpoDefault.GetConnectionProvider(Configuration.GetConnectionString("ConnectionString"), autoCreateOption);
+            services.AddSingleton(new WebApiDataStoreService(dataStore));
+
             var DataStore = SyncDataStore.CreateProviderFromString(Configuration.GetConnectionString("Sync"), AutoCreateOption.DatabaseAndSchema, out _) as ISyncDataStore;
             services.AddSingleton<ISyncDataStore>(DataStore);
             services.AddSingleton<IObjectSerializationService>(new CompressXmlObjectSerializationService());
+            
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

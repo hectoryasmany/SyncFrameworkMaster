@@ -18,34 +18,34 @@ namespace SyncFrameworkBackendMaster.Module.DatabaseUpdate {
         }
         public override void UpdateDatabaseAfterUpdateSchema() {
             base.UpdateDatabaseAfterUpdateSchema();
-            //PermissionPolicyUser sampleUser = ObjectSpace.FindObject<PermissionPolicyUser>(new BinaryOperator("UserName", "User"));
-            //if (sampleUser == null)
-            //{
-            //    sampleUser = ObjectSpace.CreateObject<PermissionPolicyUser>();
-            //    sampleUser.UserName = "User";
-            //    sampleUser.SetPassword("");
-            //}
-            //PermissionPolicyRole defaultRole = CreateDefaultRole();
-            //sampleUser.Roles.Add(defaultRole);
+            PermissionPolicyUser sampleUser = ObjectSpace.FindObject<PermissionPolicyUser>(new BinaryOperator("UserName", "User"));
+            if (sampleUser == null)
+            {
+                sampleUser = ObjectSpace.CreateObject<PermissionPolicyUser>();
+                sampleUser.UserName = "User";
+                sampleUser.SetPassword("");
+            }
+            PermissionPolicyRole defaultRole = CreateDefaultRole();
+            sampleUser.Roles.Add(defaultRole);
 
-            //PermissionPolicyUser userAdmin = ObjectSpace.FindObject<PermissionPolicyUser>(new BinaryOperator("UserName", "Admin"));
-            //if (userAdmin == null)
-            //{
-            //    userAdmin = ObjectSpace.CreateObject<PermissionPolicyUser>();
-            //    userAdmin.UserName = "Admin";
-            //    // Set a password if the standard authentication type is used
-            //    userAdmin.SetPassword("");
-            //}
-            //// If a role with the Administrators name doesn't exist in the database, create this role
-            //PermissionPolicyRole adminRole = ObjectSpace.FindObject<PermissionPolicyRole>(new BinaryOperator("Name", "Administrators"));
-            //if (adminRole == null)
-            //{
-            //    adminRole = ObjectSpace.CreateObject<PermissionPolicyRole>();
-            //    adminRole.Name = "Administrators";
-            //}
-            //adminRole.IsAdministrative = true;
-            //userAdmin.Roles.Add(adminRole);
-            //ObjectSpace.CommitChanges(); //This line persists created object(s).
+            PermissionPolicyUser userAdmin = ObjectSpace.FindObject<PermissionPolicyUser>(new BinaryOperator("UserName", "Admin"));
+            if (userAdmin == null)
+            {
+                userAdmin = ObjectSpace.CreateObject<PermissionPolicyUser>();
+                userAdmin.UserName = "Admin";
+                // Set a password if the standard authentication type is used
+                userAdmin.SetPassword("");
+            }
+            // If a role with the Administrators name doesn't exist in the database, create this role
+            PermissionPolicyRole adminRole = ObjectSpace.FindObject<PermissionPolicyRole>(new BinaryOperator("Name", "Administrators"));
+            if (adminRole == null)
+            {
+                adminRole = ObjectSpace.CreateObject<PermissionPolicyRole>();
+                adminRole.Name = "Administrators";
+            }
+            adminRole.IsAdministrative = true;
+            userAdmin.Roles.Add(adminRole);
+            ObjectSpace.CommitChanges(); //This line persists created object(s).
         }
         public override void UpdateDatabaseBeforeUpdateSchema() {
             base.UpdateDatabaseBeforeUpdateSchema();

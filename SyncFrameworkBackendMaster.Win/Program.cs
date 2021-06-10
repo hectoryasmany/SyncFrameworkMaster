@@ -75,7 +75,7 @@ namespace SyncFrameworkBackendMaster.Win {
             var SerializationService = new BIT.Data.Services.CompressXmlObjectSerializationService();
             var StringSerializactionService = new BIT.Data.Services.StringSerializationHelper();
             Type[] Types = new Type[] { typeof(Department), typeof(Employee), typeof(PermissionPolicyUser), typeof(PermissionPolicyRole), typeof(Person) };
-            var Config = new SyncDataStoreServerConfiguration(SerializationService, StringSerializactionService, "https://7198775f8547.ngrok.io", httpClient);
+            var Config = new SyncDataStoreServerConfiguration(SerializationService, StringSerializactionService, "https://aff109f045bf.ngrok.io", httpClient);
             var CnxA = @"XpoProvider=SyncDataStore;DataConnectionString='Integrated Security=SSPI;Pooling=false;Data Source=(localdb)\mssqllocaldb;Initial Catalog=SyncMaster';DeltaConnectionString='Integrated Security=SSPI;Pooling=false;Data Source=(localdb)\mssqllocaldb;Initial Catalog=SyncMasterDeltas';Identity=MASTER;EnableDeltaTracking='false';ExcludedEntities=''";
 
             var Client = SyncDataStore.CreateProviderFromString(CnxA, AutoCreateOption.DatabaseAndSchema, out _) as ISyncDataStore;

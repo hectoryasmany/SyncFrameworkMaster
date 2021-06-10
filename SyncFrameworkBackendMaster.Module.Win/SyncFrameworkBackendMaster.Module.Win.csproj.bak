@@ -4,13 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2187DA7B-C833-48DD-9095-89176F35F4D0}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <ProjectGuid>{4DC9C19C-C4AD-465B-A4CC-F8A83F0C2469}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SyncFrameworkBackendMaster.Win</RootNamespace>
-    <AssemblyName>SyncFrameworkBackendMaster.Win</AssemblyName>
+    <RootNamespace>SyncFrameworkBackendMaster.Module.Win</RootNamespace>
+    <AssemblyName>SyncFrameworkBackendMaster.Module.Win</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <ApplicationIcon>ExpressApp.ico</ApplicationIcon>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -40,114 +39,72 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BIT.Data.Sync.Demo.v21.1.3.24, Version=21.1.3.24, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BIT.Data.Sync.Demo.21.1.3.24\lib\netstandard2.0\BIT.Data.Sync.Demo.v21.1.3.24.dll</HintPath>
+    <Reference Include="BIT.Data.Sync.v20.2.5.22, Version=20.2.5.22, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BIT.Data.Sync.20.2.5.22\lib\netstandard2.0\BIT.Data.Sync.v20.2.5.22.dll</HintPath>
     </Reference>
-    <Reference Include="BIT.Data.Transfer.RestClientNet.v21.1.3.5841, Version=21.1.3.5841, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BIT.Data.Transfer.RestClientNet.21.1.3.5841\lib\netstandard2.0\BIT.Data.Transfer.RestClientNet.v21.1.3.5841.dll</HintPath>
+    <Reference Include="BIT.Data.Transfer.RestClientNet.v20.2.5.5840, Version=20.2.5.5840, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BIT.Data.Transfer.RestClientNet.20.2.5.5840\lib\netstandard2.0\BIT.Data.Transfer.RestClientNet.v20.2.5.5840.dll</HintPath>
     </Reference>
-    <Reference Include="BIT.Data.v21.1.3.5841, Version=21.1.3.5841, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BIT.Data.21.1.3.5841\lib\netstandard2.0\BIT.Data.v21.1.3.5841.dll</HintPath>
+    <Reference Include="BIT.Data.v20.2.5.5840, Version=20.2.5.5840, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BIT.Data.20.2.5.5840\lib\netstandard2.0\BIT.Data.v20.2.5.5840.dll</HintPath>
     </Reference>
-    <Reference Include="BIT.Xpo.Providers.OfflineDataSync.Demo.v21.1.3.24, Version=21.1.3.24, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BIT.Xpo.Providers.OfflineDataSync.Demo.21.1.3.24\lib\netstandard2.0\BIT.Xpo.Providers.OfflineDataSync.Demo.v21.1.3.24.dll</HintPath>
+    <Reference Include="BIT.Xpo.Providers.OfflineDataSync.Demo.v20.2.5.22, Version=20.2.5.22, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BIT.Xpo.Providers.OfflineDataSync.Demo.20.2.5.22\lib\netstandard2.0\BIT.Xpo.Providers.OfflineDataSync.Demo.v20.2.5.22.dll</HintPath>
     </Reference>
-    <Reference Include="BIT.Xpo.Providers.OfflineDataSync.NetworkExtensions.Demo.v21.1.3.24, Version=21.1.3.24, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BIT.Xpo.Providers.OfflineDataSync.NetworkExtensions.Demo.21.1.3.24\lib\netstandard2.0\BIT.Xpo.Providers.OfflineDataSync.NetworkExtensions.Demo.v21.1.3.24.dll</HintPath>
+    <Reference Include="BIT.Xpo.Providers.OfflineDataSync.NetworkExtensions.v20.2.5.22, Version=20.2.5.22, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BIT.Xpo.Providers.OfflineDataSync.NetworkExtensions.20.2.5.22\lib\netstandard2.0\BIT.Xpo.Providers.OfflineDataSync.NetworkExtensions.v20.2.5.22.dll</HintPath>
     </Reference>
-    <Reference Include="BIT.Xpo.v21.1.3.5841, Version=21.1.3.5841, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BIT.Xpo.21.1.3.5841\lib\netstandard2.0\BIT.Xpo.v21.1.3.5841.dll</HintPath>
+    <Reference Include="BIT.Xpo.v20.2.5.5840, Version=20.2.5.5840, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BIT.Xpo.20.2.5.5840\lib\netstandard2.0\BIT.Xpo.v20.2.5.5840.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.BonusSkins.v21.1">
+    <Reference Include="DevExpress.Data.Desktop.v20.2">
       <SpecificVersion>False</SpecificVersion>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DevExpress.Data.Desktop.v21.1">
-      <SpecificVersion>False</SpecificVersion>
-      <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.Data.v21.1, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <HintPath>..\packages\DevExpress.Data.21.1.3\lib\net452\DevExpress.Data.v21.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.Security.v21.1, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.ExpressApp.v21.1">
+    <Reference Include="DevExpress.ExpressApp.Security.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.v20.2">
       <SpecificVersion>False</SpecificVersion>
-      <Private>False</Private>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.Win.v21.1">
+    <Reference Include="DevExpress.ExpressApp.Win.v20.2">
       <SpecificVersion>False</SpecificVersion>
-      <Private>False</Private>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.Xpo.v21.1">
+    <Reference Include="DevExpress.ExpressApp.Xpo.v20.2">
       <SpecificVersion>False</SpecificVersion>
-      <Private>False</Private>
     </Reference>
-    <Reference Include="DevExpress.Office.v21.1.Core">
+    <Reference Include="DevExpress.Persistent.Base.v20.2">
       <SpecificVersion>False</SpecificVersion>
-      <Private>False</Private>
     </Reference>
-    <Reference Include="DevExpress.Persistent.Base.v21.1">
+    <Reference Include="DevExpress.Persistent.BaseImpl.v20.2">
       <SpecificVersion>False</SpecificVersion>
-      <Private>False</Private>
     </Reference>
-    <Reference Include="DevExpress.Persistent.BaseImpl.v21.1">
+    <Reference Include="DevExpress.Printing.v20.2.Core">
       <SpecificVersion>False</SpecificVersion>
-      <Private>False</Private>
     </Reference>
-    <Reference Include="DevExpress.Printing.v21.1.Core">
+    <Reference Include="DevExpress.Utils.v20.2">
       <SpecificVersion>False</SpecificVersion>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DevExpress.RichEdit.v21.1.Core">
-      <SpecificVersion>False</SpecificVersion>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DevExpress.RichEdit.v21.1.Export">
-      <SpecificVersion>False</SpecificVersion>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DevExpress.Utils.v21.1">
-      <SpecificVersion>False</SpecificVersion>
-      <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.Xpo.v21.1, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <HintPath>..\packages\DevExpress.Xpo.21.1.3\lib\net452\DevExpress.Xpo.v21.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraBars.v21.1">
+    <Reference Include="DevExpress.XtraBars.v20.2">
       <SpecificVersion>False</SpecificVersion>
-      <Private>False</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraEditors.v21.1">
+    <Reference Include="DevExpress.XtraEditors.v20.2">
       <SpecificVersion>False</SpecificVersion>
-      <Private>False</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraGrid.v21.1">
+    <Reference Include="DevExpress.XtraGrid.v20.2">
       <SpecificVersion>False</SpecificVersion>
-      <Private>False</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraLayout.v21.1">
+    <Reference Include="DevExpress.XtraLayout.v20.2">
       <SpecificVersion>False</SpecificVersion>
-      <Private>False</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraNavBar.v21.1">
+    <Reference Include="DevExpress.XtraNavBar.v20.2">
       <SpecificVersion>False</SpecificVersion>
-      <Private>False</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraPrinting.v21.1">
+    <Reference Include="DevExpress.XtraPrinting.v20.2">
       <SpecificVersion>False</SpecificVersion>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DevExpress.XtraRichEdit.v21.1">
-      <SpecificVersion>False</SpecificVersion>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DevExpress.XtraTreeList.v21.1">
-      <SpecificVersion>False</SpecificVersion>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DevExpress.XtraVerticalGrid.v21.1">
-      <SpecificVersion>False</SpecificVersion>
-      <Private>False</Private>
     </Reference>
     <Reference Include="Google.Protobuf, Version=3.11.2.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Protobuf.3.11.2\lib\net45\Google.Protobuf.dll</HintPath>
@@ -290,51 +247,39 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Images\Logo.svg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="ExpressApp.ico" />
-    <None Include="packages.config" />
-    <None Include="ReadMe.txt" />
-    <None Include="Images\ReadMe.txt" />
-    <None Include="App.config" />
-    <Content Include="Model.xafml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WinApplication.cs">
+    <Compile Include="WinModule.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="WinApplication.Designer.cs">
-      <DependentUpon>WinApplication.cs</DependentUpon>
+    <Compile Include="WinModule.Designer.cs">
+      <DependentUpon>WinModule.cs</DependentUpon>
     </Compile>
-    <Compile Include="XafSplashScreen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="XafSplashScreen.Designer.cs">
-      <DependentUpon>XafSplashScreen.cs</DependentUpon>
-    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Model.DesignedDiffs.xafml" />
     <EmbeddedResource Include="Properties\licenses.licx" />
-    <EmbeddedResource Include="WinApplication.resx">
-      <DependentUpon>WinApplication.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="XafSplashScreen.resx">
-      <DependentUpon>XafSplashScreen.cs</DependentUpon>
+    <EmbeddedResource Include="WinModule.resx">
+      <DependentUpon>WinModule.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Orm\Orm.csproj">
-      <Project>{edb05d17-12fe-415c-89fa-bcd61fde1c47}</Project>
-      <Name>Orm</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SyncFrameworkBackendMaster.Module.Win\SyncFrameworkBackendMaster.Module.Win.csproj">
-      <Project>{4DC9C19C-C4AD-465B-A4CC-F8A83F0C2469}</Project>
-      <Name>SyncFrameworkBackendMaster.Module.Win</Name>
-      <Private>True</Private>
-    </ProjectReference>
+    <EmbeddedResource Include="Images\ExpressAppLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Controllers\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Editors\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\SyncFrameworkBackendMaster.Module\SyncFrameworkBackendMaster.Module.csproj">
       <Project>{3CD7CD9D-1FAD-48BA-BB63-3A0D22B26D8C}</Project>
       <Name>SyncFrameworkBackendMaster.Module</Name>

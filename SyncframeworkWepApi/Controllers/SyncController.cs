@@ -1,6 +1,6 @@
 ﻿using BIT.Data.Functions;
 using BIT.Data.Services;
-using BIT.Data.Sync;
+//using BIT.Data.Sync;
 using BIT.Xpo.Providers.OfflineDataSync;
 using BIT.Xpo.Providers.OfflineDataSync.Server.Controllers;
 using DevExpress.Xpo;
